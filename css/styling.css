@@ -1,0 +1,185 @@
+#container {
+    width: 1050px;
+    /* border: 1px solid grey; */
+    margin: 0 auto;
+    /* auto on the left and right CENTERS */
+}
+
+/* header: HTML elements that only consist of floating elements is going to behave as if it doesn't have any elements inside of it. To avoid this we will give the header some height */
+
+#header{
+    height: 100px;
+    padding: 10px 0;
+}
+
+#brand {
+    float: left;
+}
+
+h1 a {
+    font-size: 50px;
+    font-weight: 100;
+    color: #9029BA;
+    text-decoration: none;
+}
+
+#search-box {
+    float: right;
+    background: linear-gradient(#E4F2B9, #B7E953);
+    height: 60px;
+    width: 400px;
+    padding: 20px 20px 0px 20px;
+    margin-top: 10px;
+}
+
+.text {
+    float: left;
+    width: 200px;
+    padding: 5px;
+    font-size: 15px;
+    color: #E36A0C;
+    /* background-image: url(../assets/search.png);
+    background-color: white;
+    background-position: center right;
+    background-repeat: no-repeat; */
+    background: white url(../assets/search.png) right center no-repeat;
+}
+
+.submit {
+    float: right;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    /* background-color can't be used for buttons so we need to use background */
+    background: #B45CDA;
+    font-size: 15px;
+}
+
+.clear {
+    clear: both;
+}
+/* We are not going to have any other elements in our header but it is good practice to clear the floating elements. */
+
+#menu {
+    height: 70px;
+    background: linear-gradient(#FDF392, #E0D339);
+    /* padding: 7px 0; */
+}
+
+ul {
+    list-style: none;
+}
+
+#menu ul li {
+    float: left;
+    padding: 0 30px;
+    border-right: 1.5px solid #5D12E7;
+    height: 25px;
+    margin: 25px 0;
+}
+
+#menu ul li a {
+    font-size: 17px;
+    text-decoration: none;
+    color: #5D12E7;
+    /* text-transform: uppercase; */
+    line-height: 27px;
+    /* the line-height helps us center the links vertically with the borders */
+    transition: font-size 0.3s ease;
+    /* linear means that the speed of the transition is the same from the beginning to the end */
+    /* EASE means that the speed starts slow and then becomes fast then ends slow */
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+    /* opera */
+    -ms-transition: font-size 0.3s ease;
+    /* internet explorer */
+
+}
+
+#menu ul li a:hover, #menu ul li a.active {
+    font-weight: bold;
+    color: #C522D6;
+    font-size: 19px;
+}
+
+#menu ul li:last-child {
+    border-right: none;
+}
+
+#introduction {
+    background: linear-gradient(#E4EEB7, #B0DD4C);
+    padding: 30px;
+    margin: 15px 0;
+}
+
+#introduction h3 {
+    font-size: 45px;
+    color: #2C5C00;
+    font-weight: normal;
+}
+
+#introduction p {
+    font-size: 25px;
+    color: #62840C;
+    text-align: justify;
+}
+
+.sidebar {
+    height: 510px;
+    width: 450px;
+    border: 1.5px solid #D1F2A7;
+    border-radius: 17px;
+}
+
+.sidebar ul {
+    padding-top: 8px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #5D12E7;
+    transition: font-size 0.3s ease;
+    -webkit-transition: font-size 0.3s ease;
+    -moz-transition: font-size 0.3s ease;
+    -ms-transition: font-size 0.3s ease;
+    -o-transition: font-size 0.3s ease;
+}
+
+.sidebar ul li a:hover, .sidebar ul li a:active {
+    text-decoration: none;
+    font-weight: bold;
+    color: #C522D6;
+    font-size: 22px;
+}
+
+#left-sidebar {
+    float: left;
+    padding: 10px 30px 
+}
+
+#left-sidebar ul li {
+    padding: 5px 0 5px 10px;
+    list-style-image: url(../assets/arrow.png);
+}
+
+#left-sidebar h3 {
+    color: #BE30D9;
+    font-size: 25px;
+}
+
+#right-sidebar {
+    float: right;
+    padding: 10px 30px;
+}
+
+#right-sidebar ul li {
+    padding: 21.5px 0 21.5px 65px;
+    background: url(../assets/checkmark.png) no-repeat left center; /*horizontal vertical*/
+}
+
+#right-sidebar h3 {
+    color: #BE30D9;
+    font-size: 25px;
+}
