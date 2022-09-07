@@ -1,3 +1,8 @@
+body {
+    /* setting the font property to our page */
+    font: Arial, Helvetica, sans-serif;
+}
+
 #container {
     width: 1050px;
     /* border: 1px solid grey; */
@@ -5,9 +10,9 @@
     /* auto on the left and right CENTERS */
 }
 
-/* header: HTML elements that only consist of floating elements is going to behave as if it doesn't have any elements inside of it. To avoid this we will give the header some height */
+/* header: HTML elements that only consist of floating elements is going to behave as if it doesn't have any elements inside of it. To avoid this we will give the add some height */
 
-#header{
+header {
     height: 100px;
     padding: 10px 0;
 }
@@ -26,6 +31,9 @@ h1 a {
 #search-box {
     float: right;
     background: linear-gradient(#E4F2B9, #B7E953);
+    background: -webkit-linear-gradient(#E4F2B9, #B7E953);
+    background: -o-linear-gradient(#E4F2B9, #B7E953);
+    background: -moz-linear-gradient(#E4F2B9, #B7E953);
     height: 60px;
     width: 400px;
     padding: 20px 20px 0px 20px;
@@ -38,6 +46,7 @@ h1 a {
     padding: 5px;
     font-size: 15px;
     color: #E36A0C;
+    border: 1px solid #C8D03E;
     /* background-image: url(../assets/search.png);
     background-color: white;
     background-position: center right;
@@ -63,7 +72,9 @@ h1 a {
 #menu {
     height: 70px;
     background: linear-gradient(#FDF392, #E0D339);
-    /* padding: 7px 0; */
+    background: -webkit-linear-gradient(#FDF392, #E0D339);
+    background: -moz-linear-gradient(#FDF392, #E0D339);
+    background: -o-linear-gradient(#FDF392, #E0D339);
 }
 
 ul {
@@ -76,6 +87,10 @@ ul {
     border-right: 1.5px solid #5D12E7;
     height: 25px;
     margin: 25px 0;
+}
+
+#menu ul li:last-child {
+    border-right: none;
 }
 
 #menu ul li a {
@@ -103,12 +118,11 @@ ul {
     font-size: 19px;
 }
 
-#menu ul li:last-child {
-    border-right: none;
-}
-
 #introduction {
     background: linear-gradient(#E4EEB7, #B0DD4C);
+    background: -webkit-linear-gradient(#E4EEB7, #B0DD4C);
+    background: -moz-linear-gradient(#E4EEB7, #B0DD4C);
+    background: -o-linear-gradient(#E4EEB7, #B0DD4C);
     padding: 30px;
     margin: 15px 0;
 }
@@ -130,6 +144,11 @@ ul {
     width: 450px;
     border: 1.5px solid #D1F2A7;
     border-radius: 17px;
+}
+
+.sidebar h3 {
+    color: #BE30D9;
+    font-size: 25px;
 }
 
 .sidebar ul {
@@ -164,11 +183,6 @@ ul {
     list-style-image: url(../assets/arrow.png);
 }
 
-#left-sidebar h3 {
-    color: #BE30D9;
-    font-size: 25px;
-}
-
 #right-sidebar {
     float: right;
     padding: 10px 30px;
@@ -179,7 +193,12 @@ ul {
     background: url(../assets/checkmark.png) no-repeat left center; /*horizontal vertical*/
 }
 
-#right-sidebar h3 {
-    color: #BE30D9;
-    font-size: 25px;
+.footer {
+    height: 60px;
+    background: linear-gradient(#FDF392, #E0D339);
+    background: -webkit-linear-gradient(#FDF392, #E0D339);
+    background: -moz-linear-gradient(#FDF392, #E0D339);
+    background: -o-linear-gradient(#FDF392, #E0D339);
+    padding: 10px 30px;
+    margin-top: 15px;
 }
