@@ -1,24 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     /* setting the font property to our page */
     font: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 #container {
-    width: 1050px;
-    /* border: 1px solid grey; */
-    margin: 0 auto;
-    /* auto on the left and right CENTERS */
+    width: 90%;
+    margin: 0 auto; /* auto on the left and right CENTERS */
 }
 
-/* header: HTML elements that only consist of floating elements is going to behave as if it doesn't have any elements inside of it. To avoid this we will give the add some height */
 
 header {
-    height: 100px;
-    padding: 10px 0;
+    /* height: 100px; */
+    padding-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #brand {
-    float: left;
+    /* float: left; */
+
+    /* flexbox transition */
+    /* flex: 1 is the same as flex: 50%; */
+    flex: 50%;
+    min-width: 421px;
+    /* OR can give flex-basis */
 }
 
 h1 a {
@@ -29,39 +40,50 @@ h1 a {
 }
 
 #search-box {
-    float: right;
     background: linear-gradient(#E4F2B9, #B7E953);
     background: -webkit-linear-gradient(#E4F2B9, #B7E953);
     background: -o-linear-gradient(#E4F2B9, #B7E953);
     background: -moz-linear-gradient(#E4F2B9, #B7E953);
-    height: 60px;
-    width: 400px;
-    padding: 20px 20px 0px 20px;
-    margin-top: 10px;
+    /* float: right; */
+    /* margin-top: 10px; */
+    /* height: 60px; */
+    /* width: 400px; */
+    
+    /* flexbox transition */
+    /* min-width: 400px; */
+    flex: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    /* min-height: 70px; using padding instead*/
 }
+/* header: HTML elements that only consist of floating elements is going to behave as if it doesn't have any elements inside of it. To avoid this we will give the add some height */
 
 .text {
-    float: left;
-    width: 200px;
-    padding: 5px;
-    font-size: 15px;
-    color: #E36A0C;
-    border: 1px solid #C8D03E;
+    /* float: left; */
+    /* width: 200px; */
     /* background-image: url(../assets/search.png);
     background-color: white;
     background-position: center right;
     background-repeat: no-repeat; */
+
     background: white url(../assets/search.png) right center no-repeat;
+    padding: 5px;
+    font-size: 15px;
+    color: #E36A0C;
+    border: 1px solid #C8D03E;
 }
 
 .submit {
-    float: right;
+    /* float: right; */
     padding: 5px;
     font-weight: bold;
     color: white;
     /* background-color can't be used for buttons so we need to use background */
     background: #B45CDA;
     font-size: 15px;
+    border: 1px inset #D6CCBB;
 }
 
 .clear {
