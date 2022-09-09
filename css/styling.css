@@ -17,7 +17,7 @@ body {
 
 header {
     /* height: 100px; */
-    padding-top: 10px;
+    padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
 }
@@ -51,8 +51,8 @@ h1 a {
     
     /* flexbox transition */
     /* min-width: 400px; */
-    flex: 50%;
     display: flex;
+    flex: 50%;
     justify-content: center;
     align-items: center;
     padding: 20px;
@@ -61,17 +61,17 @@ h1 a {
 /* header: HTML elements that only consist of floating elements is going to behave as if it doesn't have any elements inside of it. To avoid this we will give the add some height */
 
 .text {
-    /* float: left; */
-    /* width: 200px; */
     /* background-image: url(../assets/search.png);
     background-color: white;
     background-position: center right;
     background-repeat: no-repeat; */
-
-    background: white url(../assets/search.png) right center no-repeat;
+    
+    /* float: left; */
+    width: 200px;
     padding: 5px;
     font-size: 15px;
     color: #E36A0C;
+    background: white url(../assets/search.png) right center no-repeat;
     border: 1px solid #C8D03E;
 }
 
@@ -92,35 +92,34 @@ h1 a {
 /* We are not going to have any other elements in our header but it is good practice to clear the floating elements. */
 
 #menu {
-    height: 70px;
+    /* height: 70px; */
     background: linear-gradient(#FDF392, #E0D339);
     background: -webkit-linear-gradient(#FDF392, #E0D339);
     background: -moz-linear-gradient(#FDF392, #E0D339);
     background: -o-linear-gradient(#FDF392, #E0D339);
+    /* padding: 7px 0; */
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-ul {
+/* ul {
     list-style: none;
-}
+} */
 
-#menu ul li {
-    float: left;
+#menu a {
+    /* float: left; */
     padding: 0 30px;
     border-right: 1.5px solid #5D12E7;
-    height: 25px;
-    margin: 25px 0;
-}
+    height: 30px;
+    /* margin: 25px 0; */
 
-#menu ul li:last-child {
-    border-right: none;
-}
 
-#menu ul li a {
     font-size: 17px;
     text-decoration: none;
     color: #5D12E7;
     /* text-transform: uppercase; */
-    line-height: 27px;
+    line-height: 30px;
     /* the line-height helps us center the links vertically with the borders */
     transition: font-size 0.3s ease;
     /* linear means that the speed of the transition is the same from the beginning to the end */
@@ -131,13 +130,28 @@ ul {
     /* opera */
     -ms-transition: font-size 0.3s ease;
     /* internet explorer */
-
 }
 
-#menu ul li a:hover, #menu ul li a.active {
+#menu a:last-child {
+    border-right: none;
+}
+
+#menu a:hover, #menu a.active {
     font-weight: bold;
     color: #C522D6;
     font-size: 19px;
+}
+
+/* small screens: vertical menu - targeting screens */
+@media screen and (max-width: 700px) {
+    #menu {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #menu a {
+        border-right: none;
+    }
 }
 
 #introduction {
