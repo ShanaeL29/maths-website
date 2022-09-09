@@ -133,7 +133,7 @@ h1 a {
     border-radius: 17px;
     padding: 10px 30px;
     flex: 1;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .sidebar h3 {
@@ -164,7 +164,7 @@ h1 a {
 }
 
 #left-sidebar {
-    margin-right: 10px;
+    margin-right: 7.5px;
 }
 
 #left-sidebar ul li {
@@ -173,7 +173,7 @@ h1 a {
 }
 
 #right-sidebar {
-    margin-left: 10px;
+    margin-left: 7.5px;
 }
 
 #right-sidebar ul li {
@@ -209,13 +209,9 @@ h1 a {
 
     #left-sidebar {
         margin-right: 0;
-        padding: none;
-        margin-right: 0;
     }
     
     #right-sidebar {
-        margin-left: 0;
-        padding: none;
         margin-left: 0;
     }
 }
