@@ -3,7 +3,6 @@
 }
 
 body {
-    /* setting the font property to our page */
     font: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
@@ -11,25 +10,22 @@ body {
 
 #container {
     width: 90%;
-    margin: 0 auto; /* auto on the left and right CENTERS */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 
 
 header {
-    /* height: 100px; */
     padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
 }
 
 #brand {
-    /* float: left; */
-
-    /* flexbox transition */
-    /* flex: 1 is the same as flex: 50%; */
     flex: 50%;
     min-width: 421px;
-    /* OR can give flex-basis */
 }
 
 h1 a {
@@ -44,30 +40,14 @@ h1 a {
     background: -webkit-linear-gradient(#E4F2B9, #B7E953);
     background: -o-linear-gradient(#E4F2B9, #B7E953);
     background: -moz-linear-gradient(#E4F2B9, #B7E953);
-    /* float: right; */
-    /* margin-top: 10px; */
-    /* height: 60px; */
-    /* width: 400px; */
-    
-    /* flexbox transition */
-    /* min-width: 400px; */
     display: flex;
     flex: 50%;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    /* min-height: 70px; using padding instead*/
 }
-/* header: HTML elements that only consist of floating elements is going to behave as if it doesn't have any elements inside of it. To avoid this we will give the add some height */
 
 .text {
-    /* background-image: url(../assets/search.png);
-    background-color: white;
-    background-position: center right;
-    background-repeat: no-repeat; */
-    
-    /* float: left; */
-    width: 200px;
     padding: 5px;
     font-size: 15px;
     color: #E36A0C;
@@ -76,11 +56,9 @@ h1 a {
 }
 
 .submit {
-    /* float: right; */
     padding: 5px;
     font-weight: bold;
     color: white;
-    /* background-color can't be used for buttons so we need to use background */
     background: #B45CDA;
     font-size: 15px;
     border: 1px inset #D6CCBB;
@@ -89,47 +67,29 @@ h1 a {
 .clear {
     clear: both;
 }
-/* We are not going to have any other elements in our header but it is good practice to clear the floating elements. */
 
 #menu {
-    /* height: 70px; */
     background: linear-gradient(#FDF392, #E0D339);
     background: -webkit-linear-gradient(#FDF392, #E0D339);
     background: -moz-linear-gradient(#FDF392, #E0D339);
     background: -o-linear-gradient(#FDF392, #E0D339);
-    /* padding: 7px 0; */
     padding: 20px 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-/* ul {
-    list-style: none;
-} */
-
 #menu a {
-    /* float: left; */
     padding: 0 30px;
     border-right: 1.5px solid #5D12E7;
-    height: 30px;
-    /* margin: 25px 0; */
-
-
     font-size: 17px;
     text-decoration: none;
     color: #5D12E7;
-    /* text-transform: uppercase; */
     line-height: 30px;
-    /* the line-height helps us center the links vertically with the borders */
     transition: font-size 0.3s ease;
-    /* linear means that the speed of the transition is the same from the beginning to the end */
-    /* EASE means that the speed starts slow and then becomes fast then ends slow */
     -webkit-transition: font-size 0.3s ease;
     -moz-transition: font-size 0.3s ease;
     -o-transition: font-size 0.3s ease;
-    /* opera */
     -ms-transition: font-size 0.3s ease;
-    /* internet explorer */
 }
 
 #menu a:last-child {
@@ -140,18 +100,6 @@ h1 a {
     font-weight: bold;
     color: #C522D6;
     font-size: 19px;
-}
-
-/* small screens: vertical menu - targeting screens */
-@media screen and (max-width: 700px) {
-    #menu {
-        flex-direction: column;
-        align-content: center;
-    }
-
-    #menu a {
-        border-right: none;
-    }
 }
 
 #introduction {
@@ -175,11 +123,17 @@ h1 a {
     text-align: justify;
 }
 
+.sidebar-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .sidebar {
-    height: 510px;
-    width: 450px;
     border: 1.5px solid #D1F2A7;
     border-radius: 17px;
+    padding: 10px 30px;
+    flex: 1;
+    margin-bottom: 10px;
 }
 
 .sidebar h3 {
@@ -210,8 +164,7 @@ h1 a {
 }
 
 #left-sidebar {
-    float: left;
-    padding: 10px 30px 
+    margin-right: 10px;
 }
 
 #left-sidebar ul li {
@@ -220,13 +173,13 @@ h1 a {
 }
 
 #right-sidebar {
-    float: right;
-    padding: 10px 30px;
+    margin-left: 10px;
 }
 
 #right-sidebar ul li {
     padding: 21.5px 0 21.5px 65px;
-    background: url(../assets/checkmark.png) no-repeat left center; /*horizontal vertical*/
+    background: url(../assets/checkmark.png) no-repeat left center;
+    list-style: none;
 }
 
 .footer {
@@ -236,5 +189,33 @@ h1 a {
     background: -moz-linear-gradient(#FDF392, #E0D339);
     background: -o-linear-gradient(#FDF392, #E0D339);
     padding: 10px 30px;
-    margin-top: 15px;
+    margin-top: auto;
+}
+
+/* small screens: vertical menu*/
+@media screen and (max-width: 700px) {
+    #menu {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #menu a {
+        border-right: none;
+    }
+
+    .sidebar-group{
+        flex-direction: column;
+    }
+
+    #left-sidebar {
+        margin-right: 0;
+        padding: none;
+        margin-right: 0;
+    }
+    
+    #right-sidebar {
+        margin-left: 0;
+        padding: none;
+        margin-left: 0;
+    }
 }
